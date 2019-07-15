@@ -1,0 +1,20 @@
+{
+  "name": "majormud-captures",
+  "version": "0.0.1",
+  "description": "Tool for recording and viewing MajorMUD captures.",
+  "author": "Ryan Zander <exide@hotmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Exide/majormud-captures#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Exide/majormud-captures.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Exide/majormud-captures/issues"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.28",
+    "@types/node": "^12.6.2",
+    "typescript": "^3.5.3"
+  }
+}
