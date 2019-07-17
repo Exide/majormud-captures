@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <title>MajorMUD Captures</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LciEq4UAAAAACfLRrJCeLu5juqZT4F-O7AUDjJX"></script>
+    <script defer>
+        function attachReCAPTCHAToken() {
+            grecaptcha.execute('6LciEq4UAAAAACfLRrJCeLu5juqZT4F-O7AUDjJX', {action: 'upload'}).then(function (token) {
+                document.getElementById('recaptcha_token').value = token;
+            });
+        }
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+        .right {
+            text-align: right;
+        }
+
+        html, body, h1, h4, textarea, input, p {
+            font-family: "Monaco", "Courier New", monospace;
+        }
+
+        body {
+            background-color: #000;
+            color: #aaa;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        textarea.form-control,
+        textarea.form-control:focus {
+            border-color: #666;
+            background-color: #111;
+            color: #aaa;
+            padding: 2px 5px;
+        }
+
+        input.form-control-file {
+            color: #fff;
+        }
+
+        .footer {
+            text-align: right;
+            color: #444;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <h1>MajorMUD Captures</h1>
+
+    <form action="/" method="post">
+
+        <div class="form-group">
+            <label for="textarea">Paste your capture into this box</label>
+            <textarea name="textarea" id="textarea" class="form-control" rows="15"></textarea>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="file">Or select a capture on your computer (plain text only)</label>
+                    <input id="file" name="file" class="form-control-file" type="file" accept="text/plain" />
+                </div>
+            </div>
+            <div class="col-1 right">
+                <input name="recaptcha_token" id="recaptcha_token" hidden />
+                <button type="submit" class="btn btn-primary" onClick="attachReCAPTCHAToken()">Upload</button>
+            </div>
+        </div>
+
+    </form>
+
+    <div class="row footer">
+        <div class="col">
+            <p>
+                <small>
+                This is site is created and maintained by Ryan Zander. Copyright &copy; 2019. All rights reserved.<br/>
+                All product and company names are trademarks&trade; or registered&reg; trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+                </small>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
